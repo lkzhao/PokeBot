@@ -1,5 +1,7 @@
 # PokeBot
-A Pokemon Go bot app based on python that can do the following things:
+A Pokemon Go bot app based on python
+that can do following things:
+
 1. Walk as you & starts at any location
 2. Catch Pokemons
 3. Search PokeStops
@@ -8,12 +10,12 @@ A Pokemon Go bot app based on python that can do the following things:
 6. Adjustable speed 
 
 ## Desktop App
-[Download Link(Mac)]()
+[Download Link(Mac)](https://github.com/lkzhao/PokeBot/blob/master/releases/PokeBot.zip)
 
 This is in development! There is no crash handling logic. so not as stable as the command line one.
 
 
-## Installation
+## Installation (Command Line Version)
 1. first install python and pip
 ```
 sudo pip install virtualenv
@@ -32,17 +34,16 @@ src/pokebot.py -u <EMAIL> -p <PASSWORD> -a <SIGNINTYPE> -l <LOCATION> -s <SPEED>
 * SPEED: any integer >= 1, (1 is normal human speed, 10 is recommanded, 20+ will be banned)
 
 ## Compile Desktop App (Mac)
-This is in development! Will work but there is no crash handling logic. so not as stable as the command line one.
 ```bash
 cd app
 npm install
 sudo npm install electron-packager -g
 sudo npm install electron-prebuilt -g
 
-// compile python executable
+# compile python executable
 pip install pyinstaller
 pyinstaller main.spec --clean --distpath app
-// compile app
+# compile app
 electron-packager app --platform=darwin --arch=x64
 ```
 
