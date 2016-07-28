@@ -50,10 +50,6 @@ def catch_all(path):
     return app.send_static_file('index.html')
 
 if __name__ == "__main__":
-  try:
-    os.remove("events.log")
-  except:
-    pass
   logging.basicConfig(level=logging.INFO)
   logging.getLogger("lukeapi").setLevel(logging.INFO)
   app.run()

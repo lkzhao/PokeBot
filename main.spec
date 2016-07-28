@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['src/main.py'],
-             pathex=['/Users/luke/Projects/pgoapi'],
+             pathex=['.'],
              binaries=[('ENV/lib/python2.7/site-packages/Cryptodome/**/*.so','.')],
              datas=None,
              hiddenimports=[],
