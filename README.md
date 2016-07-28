@@ -10,7 +10,8 @@ that can do following things:
 6. Adjustable speed 
 
 ## Desktop App
-[Download Link(Mac)](https://github.com/lkzhao/PokeBot/blob/master/releases/PokeBot.zip)
+![ScreenShot](https://raw.githubusercontent.com/lkzhao/PokeBot/master/releases/PokeBot.png)
+[Download Link(Mac)](https://raw.githubusercontent.com/lkzhao/PokeBot/master/releases/PokeBot.zip)
 
 This is in development! There is no crash handling logic. so not as stable as the command line one.
 
