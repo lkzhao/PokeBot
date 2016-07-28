@@ -1,0 +1,43 @@
+{
+  "name": "PokeBot",
+  "version": "0.2.0",
+  "main": "app.js",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^9.0.3",
+    "electron-prebuilt": "^1.2.7",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "jquery": "^3.1.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-google-maps": "^4.11.0",
+    "react-router": "^2.6.0",
+    "react-sidebar": "^2.2.1",
+    "react-toastr": "^2.7.0",
+    "reactify": "^1.1.0",
+    "request-promise": "^4.0.2",
+    "watchify": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "electron-packager": "^7.3.0",
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

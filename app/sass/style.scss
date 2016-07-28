@@ -1,0 +1,258 @@
+
+$navbarHeight: 64px;
+$footerHeight: 300px;
+
+$purple: rgb(170, 129, 243);
+$orange: rgb(227, 99, 70);
+
+$primaryBackgroundColor: #FFFFFF;
+$secondaryBackgroundColor: #F2F5F4;
+$textColor: #5D788E;
+$lightTextColor: #FFFFFF;
+$highlightColor: #01B6C7;
+
+$themeColor: $textColor;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input:focus {
+    outline: none;
+}
+
+
+
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    height:100%;
+    font-size:16px;
+}
+
+h1{
+    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Open Sans', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 35px;
+    margin:20px 0px 15px;
+}
+h2{
+    font-size: 28px;
+    margin:20px 0px 15px;
+}
+
+h3{
+    font-size: 24px;
+    margin:15px 0px 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mapContainer{
+  height: 100%;
+  width:100%;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 3;
+}
+
+.marker{
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  margin-top: -5px;
+  transform: translate(-50%, -100%);
+  cursor:pointer;
+  .HomeView{
+    margin:0 !important;
+    width: 250px !important;
+    height: 200px !important;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -7px;
+    box-sizing: border-box;
+    
+    border: 5px solid black;
+    border-color: transparent transparent white white;
+    
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  &.fort{
+    padding:0px;
+    width:24px;
+    height:24px;
+    border-radius: 12px;
+    img{
+      width:14px;
+      height:16px;
+      margin:4px 5px;
+    }
+    &:after{
+      bottom: -7px;
+    }
+  }
+  &:not(.nohover){
+    &:hover{
+      background: #f0f0f0;
+      &:after{
+        border-color: transparent transparent #f0f0f0 #f0f0f0;
+      }
+    }
+  }
+}
+.cluster{
+  position: relative;
+  img{
+    display: none;
+  }
+  > div{
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    color: $textColor !important;
+    font-size: 16px !important;
+  }
+}
+
+.login{
+  h1{
+    margin-top: 5px;
+  }
+  width:300px;
+  padding:10px;
+  input {
+    width:100%;
+    height:40px;
+    padding:5px 10px;
+    background: #f0f0f0;
+    border:none;
+    border-bottom:1px solid #e0e0e0;
+    &:first-child{
+      border-radius:7px 7px 0 0;
+    }
+  }
+  button {
+    color:white;
+    background:#2ecc71;
+    border:none;
+    border-radius: 0 0 7px 7px;
+    width:100%;
+    height:40px;
+    padding:5px 10px;
+  }
+}
+.loginContainer{
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 500;
+}
+.sidebar {
+  padding:15px;
+  width:300px;
+  z-index: 500 !important;
+  .name{
+    text-transform: capitalize;
+  }
+  em{
+    margin-left:20px;
+    font-weight: 700;
+  }
+}
+
+
+@keyframes Pulse {
+  0%   { box-shadow: inset 0 0 0 3px white; }
+  100% { box-shadow: inset 0 0 0 5px white; }
+}
+
+.position{
+  position:relative;
+  .here{
+    box-sizing:border-box;
+    margin-left:-12px;
+    margin-top:-12px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border-radius: 12px;
+    .inner{
+      width: 24px;
+      height: 24px;
+      background: rgb(15,129,251);
+      border-radius: 12px;
+      animation: Pulse 1s infinite alternate;
+    }
+  }
+}
